@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória com Imagens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+}
+
+.card img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.card.flipped img {
+    display: block;
+}
+
+</style>
+<body>
+    <h1>Jogo da Memória</h1>
+    <div id="game-board"></div>
+    <button id="reset-button">Reiniciar Jogo</button>
+    <script src="./script/jogo2.js"></script>
+</body>
+</html>
